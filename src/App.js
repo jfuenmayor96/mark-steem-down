@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
+import Editor from "./containers/Editor/Editor";
 
 class App extends Component {
   render() {
     return (
-      <h1>Hello world</h1>
+      <Editor/>
     );
   }
 }
