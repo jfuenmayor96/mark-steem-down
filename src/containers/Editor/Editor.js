@@ -234,7 +234,7 @@ class Editor extends Component {
                     </div>
                     {/* Instructions and tips*/}
                     <div className="row">
-                        <div className="col-lg-6">
+                        <div className="col-lg-6" style={{paddingLeft: "30px", paddingRight: "30px"}}>
                             <h2>Instructions</h2>
                             <ol>
                                 <li><span>Select the text you would like to format.</span></li>
@@ -242,15 +242,14 @@ class Editor extends Component {
                                 <li><span>Start enjoying and writing amazing posts.</span></li>
                             </ol>
                             <h2>Support and feedback</h2>
-                            <p style={{textAlign: "justify"}}>If you have any comments, suggestions or want to add more tips and tricks, please leave them as a comment in the original Steemit post <a href="#">here</a> or create an issue in the <a href="https://github.com/jfuenmayor96/mark-steem-down">Github repo</a>. If you like my work, please consider making upvote in Steemit and resteeming the post, or making a little donation in <a href="https://paypal.me/jfuenmayor96">Paypal</a>.</p>
+                            <p style={{textAlign: "justify"}}>If you have any comments, suggestions or want to add more tips and tricks, please leave them as a comment in the original Steemit post <a href="#">here</a> or create an issue in the <a href="https://github.com/jfuenmayor96/mark-steem-down">Github repo</a>. If you like my work, please consider making upvote in Steemit and resteeming the post, or making a little donation in <a href="https://paypal.me/jfuenmayor96">Paypal</a> or <a href="https://steemit.com/@jfuenmayor96">Steemit</a>.</p>                            
                         </div>
-
-                        <div className="col-lg-6">
+                        <div className="col-lg-6" style={{paddingLeft: "30px", paddingRight: "30px"}}>
                             <h2>Tips and tricks</h2>
                             <ul>
                                 <li>If you want to use different <b>headings</b>, use multiple #, for example:<br/>
-                                Use # for a <code>h1</code> heading <h1 style={{color: "#005b96"}}>Like this one</h1><br/>
-                                Use ## for a <code>h2</code> heading <h2 style={{color: "#005b96"}}>Like this one</h2><br/>
+                                Use # for a <code>h1</code> heading.<br/>
+                                Use ## for a <code>h2</code> heading.<br/>
                                 And so on...<br/>
                                 </li>
                                 <li>If you want to write a <b>block of code</b> <br/>
@@ -258,6 +257,13 @@ class Editor extends Component {
                                 Use 3 back sticks <code>`</code> to wrap your code.</li>
                             </ul>
                         </div>
+                        <p className="col-lg-12 col-md-12 col-sm-12 col-xs-12" style={{textAlign: "center", paddingTop: "25px", paddingLeft: "30px", paddingRight: "30px"}}>
+                                <a href="https://jfuenmayor96.github.io" alt="Julio Fuenmayor's personal portfolio"><i className="fa fa-2x fa-briefcase" aria-hidden="true"> </i></a>
+                                <a href="https://github.com/jfuenmayor96" alt="Julio Fuenmayor's Github account"><i className="fa fa-2x fa-github" aria-hidden="true"> </i></a>
+                                <a href="https://twitter.com/jfuenmayor96" alt="Julio Fuenmayor's Twitter account"><i className="fa fa-2x fa-twitter" aria-hidden="true"> </i></a>
+                                <a href="https://medium.com/@jfuenmayor96" alt="Julio Fuenmayor's Medium Account"><i className="fa fa-2x fa-medium" aria-hidden="true"> </i></a>
+
+                            </p>
                     </div>
                 </div>
             </div>
