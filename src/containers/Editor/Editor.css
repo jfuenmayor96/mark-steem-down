@@ -11,8 +11,14 @@ i {
     color: black;
 }
 
+.editor {
+    margin: 10px 10px;
+    border: none;
+} 
+
 textarea{
     font-family: "monospace";
+    border-radius: 5px;
 }
 
 textarea:focus {
@@ -31,12 +37,14 @@ div.row div.btn-group {
 
 .btn {
     margin: 10px auto !important;
-    border-color: #6497b1;
-    transition: border-color .2s;
+    transition: background-color .4s;
 }
 
 .btn:hover {
-    border-color: #03396c;
-    transition: border-color .2s;
+    transition: background-color .4s;
 }
 
+
+.btn:focus, .btn:active {
+  outline: none !important;
+}
