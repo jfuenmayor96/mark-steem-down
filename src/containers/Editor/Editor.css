@@ -1,4 +1,42 @@
 h1.title {
     font-family: "monospace";
-    color: gray;
+    color: #011f4b;
 }
+
+h2 {
+    color: #03396c;
+}
+
+i {
+    color: black;
+}
+
+textarea{
+    font-family: "monospace";
+}
+
+textarea:focus {
+    border-color: #011f4b;
+}
+
+div.row div.btn-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-family: "monospace";
+    color: #03396c !important;
+}
+
+.btn {
+    margin: 10px auto !important;
+    border-color: #6497b1;
+    transition: border-color .2s;
+}
+
+.btn:hover {
+    border-color: #03396c;
+    transition: border-color .2s;
+}
+
