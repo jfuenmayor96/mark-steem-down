@@ -48,3 +48,11 @@ div.row div.btn-group {
 .btn:focus, .btn:active {
   outline: none !important;
 }
+
+p>a>i {
+    padding: 0px 5px;
+}
+
+i {
+    color: #011f4b;
+}
