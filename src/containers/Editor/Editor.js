@@ -38,7 +38,7 @@ class Editor extends Component {
         this.state = {
             "start": undefined,
             "end": undefined,
-            "value": "Hello *world*"
+            "value": "# Start writing your text above"
         }
     }
 
@@ -251,7 +251,11 @@ class Editor extends Component {
                         <div className="col-lg-3 col-md-3"></div>
                     </div>
 
-                    <div className="content" dangerouslySetInnerHTML={this.getRawMarkup()}/>
+                    <div className="row">
+                        <div className="col-lg-3 col-md-3"></div>
+                        <div className="content col-lg-6 col-md-6 col-sm-12 col-xs-12" dangerouslySetInnerHTML={this.getRawMarkup()}/>
+                        <div className="col-lg-3 col-md-3"></div>
+                    </div>
 
                     {/* Instructions and tips*/}
                     <div className="row">
@@ -263,7 +267,7 @@ class Editor extends Component {
                                 <li><span>Start enjoying and writing amazing posts.</span></li>
                             </ol>
                             <h2>Support and feedback</h2>
-                            <p style={{textAlign: "justify"}}>If you have any comments, suggestions or want to add more tips and tricks, please leave them as a comment in the original Steemit post <a href="#">here</a> or create an issue in the <a href="https://github.com/jfuenmayor96/mark-steem-down">Github repo</a>. If you like my work, please consider making upvote in Steemit and resteeming the post, or making a little donation in <a href="https://paypal.me/jfuenmayor96">Paypal</a> or <a href="https://steemit.com/@jfuenmayor96">Steemit</a>.</p>                            
+                            <p style={{textAlign: "justify"}}>If you have any comments, suggestions or want to add more tips and tricks, please leave them as a comment in the original Steemit post <a href="https://steemit.com/steemit/@jfuenmayor96/mark-steem-down-edit-your-steemit-posts-easier">here</a> or create an issue in the <a href="https://github.com/jfuenmayor96/mark-steem-down">Github repo</a>. If you like my work, please consider making upvote in Steemit and resteeming the post, or making a little donation in <a href="https://paypal.me/jfuenmayor96">Paypal</a> or <a href="https://steemit.com/@jfuenmayor96">Steemit</a>.</p>                            
                         </div>
                         <div className="col-lg-6" style={{paddingLeft: "30px", paddingRight: "30px"}}>
                             <h2>Tips and tricks</h2>
