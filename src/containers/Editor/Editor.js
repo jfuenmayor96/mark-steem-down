@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./Editor.css"
+import Remarkable from "remarkable";
 
 class Editor extends Component {
     constructor() {
@@ -7,8 +8,10 @@ class Editor extends Component {
         // Methods
         this.clearPost = this.clearPost.bind(this);
         this.copyToClipboard = this.copyToClipboard.bind(this);
+        this.getRawMarkup = this.getRawMarkup.bind(this);
         this.handleBold = this.handleBold.bind(this);
         this.handleCenter = this.handleCenter.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this.handleCode = this.handleCode.bind(this);
         this.handleHeading = this.handleHeading.bind(this);
         this.handleImage = this.handleImage.bind(this);
@@ -34,7 +37,8 @@ class Editor extends Component {
             end:   saves the ending index of the selected string */
         this.state = {
             "start": undefined,
-            "end": undefined
+            "end": undefined,
+            "value": "Hello *world*"
         }
     }
 
@@ -64,6 +68,15 @@ class Editor extends Component {
         this.post.value = "";
     }
 
+    /* Updates the state of the application to with the current text of the <textarea> 
+       This method was taken from the example "A Component Using External Plugins" 
+       in https://facebook.github.io/react/
+    */
+    getRawMarkup() {
+        var md = new Remarkable();
+        return { __html: md.render(this.state.value) };
+    }
+
     /* Modifies the string to add bold format */
     handleBold(){
         this.sliceString();
@@ -75,6 +88,11 @@ class Editor extends Component {
         this.sliceString();
         this.post.value = this.beg + "<center>" + this.selection + "</center>" + this.end;
     } 
+
+    /* Updates the state of the app in order to show the new changes in the preview */
+    handleChange(){
+        this.setState({"value": this.post.value});
+    }
 
     /* Modifies the string to insert an inline code*/
     handleCode(){
@@ -216,7 +234,7 @@ class Editor extends Component {
                     {/*Editor's area*/}
                     <div className="row">
                         <span className="col-lg-3 col-md-3 col-sm-2 col-xs-1"></span>
-                        <textarea className="col-lg-6 col-lg-6 col-sm-8 col-xs-10" rows="12" id="post" name="post" onMouseUp={this.handleSelection} onKeyUpCapture={this.handleKeyboardSelection}></textarea>
+                        <textarea className="col-lg-6 col-lg-6 col-sm-8 col-xs-10" rows="12" id="post" name="post" onMouseUp={this.handleSelection} onKeyUpCapture={this.handleKeyboardSelection} onChange={this.handleChange}></textarea>
                         <span className="col-lg-3 col-md-3 col-sm-2 col-xs-1"></span>
                     </div>  
                     {/*Copy to clipboard and clear button's area*/}
@@ -232,6 +250,9 @@ class Editor extends Component {
                         </div>    
                         <div className="col-lg-3 col-md-3"></div>
                     </div>
+
+                    <div className="content" dangerouslySetInnerHTML={this.getRawMarkup()}/>
+
                     {/* Instructions and tips*/}
                     <div className="row">
                         <div className="col-lg-6" style={{paddingLeft: "30px", paddingRight: "30px"}}>
