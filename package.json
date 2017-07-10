@@ -2,6 +2,9 @@
   "name": "mark-steem-down",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "6.10.3"
+  },
   "dependencies": {
     "gh-pages": "^1.0.0",
     "react": "^15.6.1",
@@ -14,6 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm install && npm run build"
   }
 }
