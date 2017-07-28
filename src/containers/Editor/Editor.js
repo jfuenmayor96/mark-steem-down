@@ -295,8 +295,19 @@ class Editor extends Component {
                           <textarea style={{marginBottom: "10px", width: "100%"}} rows="1" id="title" name="title" placeholder="Title"></textarea><br/>
                           <textarea style={{width: "100%"}} rows="12" id="post" name="post" onMouseUp={this.handleSelection} onKeyUpCapture={this.handleKeyboardSelection} onChange={this.handleChange} placeholder="Hello world"></textarea>
                         </div>
-                      {/*Archived posts*/}
-                        <div className="col-lg-3 col-md-3 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
+                      {/*Archived posts for lg and md screens*/}
+                        <div className="col-lg-3 col-md-3 visible-lg visible-md hidden-sm hidden-xs">
+                          <h2 style={{fontSize: "24px", textAlign: "center", marginTop: "0px", paddingTop: "0px"}}>Archived posts</h2>
+                          <select id="postSelector" className="pull-right" style={{width: "100%"}}>
+                            {this.postArray.map(post => {
+                              return(
+                                <option value={post.id}>{post.id} - {post.title}</option>
+                              );
+                            })}
+                          </select>
+                        </div>
+                        {/*Archived posts for sm and xs screens*/}
+                        <div className="col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10 visible-sm visible-xs hidden-lg hidden-md">
                           <h2 style={{fontSize: "24px", textAlign: "center", marginTop: "0px", paddingTop: "0px"}}>Archived posts</h2>
                           <select id="postSelector" className="pull-right" style={{width: "100%"}}>
                             {this.postArray.map(post => {
@@ -307,6 +318,7 @@ class Editor extends Component {
                           </select>
                         </div>
                     </div>
+
                     {/*Copy to clipboard and clear button's area*/}
                     <div className="row">
                         <div className="col-lg-3 col-md-3"></div>
