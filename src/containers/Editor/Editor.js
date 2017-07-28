@@ -291,12 +291,12 @@ class Editor extends Component {
                     </div>
                     {/*Editor's area*/}
                     <div className="row">
-                        <div className="col-lg-offset-3 col-md-offset-3 col-sm-offset-2 col-xs-offset-1 col-lg-6 col-lg-6 col-sm-8 col-xs-10">
+                        <div className="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
                           <textarea style={{marginBottom: "10px", width: "100%"}} rows="1" id="title" name="title" placeholder="Title"></textarea><br/>
                           <textarea style={{width: "100%"}} rows="12" id="post" name="post" onMouseUp={this.handleSelection} onKeyUpCapture={this.handleKeyboardSelection} onChange={this.handleChange} placeholder="Hello world"></textarea>
                         </div>
                       {/*Archived posts*/}
-                        <div className="col-lg-3 col-md-3 col-sm-2 col-xs-1">
+                        <div className="col-lg-3 col-md-3 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
                           <h2 style={{fontSize: "24px", textAlign: "center", marginTop: "0px", paddingTop: "0px"}}>Archived posts</h2>
                           <select id="postSelector" className="pull-right" style={{width: "100%"}}>
                             {this.postArray.map(post => {
@@ -355,7 +355,7 @@ class Editor extends Component {
                                 </li>
                                 <li>If you want to write a <b>block of code</b> <br/>
                                 <pre><code>like<br/>this<br/>one<br/></code></pre><br/>
-                                Use 3 back sticks <code>`</code> to wrap your code.</li>
+                                Use 3 back sticks <code>&#96;</code> to wrap your code.</li>
                             </ul>
                         </div>
                         <p className="col-lg-12 col-md-12 col-sm-12 col-xs-12" style={{textAlign: "center", paddingTop: "25px", paddingLeft: "30px", paddingRight: "30px"}}>
@@ -363,8 +363,7 @@ class Editor extends Component {
                                 <a href="https://github.com/jfuenmayor96" alt="Julio Fuenmayor's Github account"><i className="fa fa-2x fa-github" aria-hidden="true"> </i></a>
                                 <a href="https://twitter.com/jfuenmayor96" alt="Julio Fuenmayor's Twitter account"><i className="fa fa-2x fa-twitter" aria-hidden="true"> </i></a>
                                 <a href="https://medium.com/@jfuenmayor96" alt="Julio Fuenmayor's Medium Account"><i className="fa fa-2x fa-medium" aria-hidden="true"> </i></a>
-
-                            </p>
+                        </p>
                     </div>
                 </div>
             </div>
