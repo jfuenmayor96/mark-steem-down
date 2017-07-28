@@ -1,12 +1,17 @@
 # Mark Steem Down
 
-A simple multipourpose MarkDown editor, made in ReactJS and hosted in Heroku. 
+A simple multipourpose MarkDown editor, made in ReactJS and hosted in Heroku.
 
 
 # Changelog
 
-## V1.1 10/07/17 
-- Post live preview option
+## v1.2 28/07/17
+- Archive post feature added
+- Load archived post feature added
+- Post title added for the archive feature
+
+## V1.1 10/07/17
+- Post live preview added
 - Underline option is not accepted by Steemit
 
 ## V1.0 09/07/17
