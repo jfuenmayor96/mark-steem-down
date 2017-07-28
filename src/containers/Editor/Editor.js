@@ -340,6 +340,7 @@ class Editor extends Component {
                             <ol>
                                 <li><span>Select the text you would like to format.</span></li>
                                 <li><span>Click on one of the options above the text area.</span></li>
+                                <li><span>Save one post by clicking on the Archive option, and then load it again with the Load option.</span></li>
                                 <li><span>Start enjoying and writing amazing posts.</span></li>
                             </ol>
                             <h2>Support and feedback</h2>
