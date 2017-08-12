@@ -14,7 +14,7 @@ i {
 .editor {
     margin: 10px 10px;
     border: none;
-} 
+}
 
 textarea{
     font-family: "monospace";
@@ -55,4 +55,9 @@ p>a>i {
 
 i {
     color: #011f4b;
+}
+
+div.preview > p >img {
+  height: 100%;
+  width: 100%;
 }

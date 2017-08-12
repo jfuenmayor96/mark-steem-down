@@ -5,6 +5,9 @@ A simple multipourpose MarkDown editor, made in ReactJS and hosted in Heroku.
 
 # Changelog
 
+## 1.2.1 12/08/17
+- High resolution images don't overflow the preview area
+
 ## v1.2 28/07/17
 - Archive post feature added
 - Load archived post feature added

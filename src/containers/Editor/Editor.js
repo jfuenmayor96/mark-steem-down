@@ -341,7 +341,7 @@ class Editor extends Component {
 
                     <div className="row">
                         <div className="col-lg-3 col-md-3"></div>
-                        <div className="content col-lg-6 col-md-6 col-sm-12 col-xs-12" dangerouslySetInnerHTML={this.getRawMarkup()}/>
+                        <div className="content col-lg-6 col-md-6 col-sm-12 col-xs-12 preview" dangerouslySetInnerHTML={this.getRawMarkup()}/>
                         <div className="col-lg-3 col-md-3"></div>
                     </div>
 
